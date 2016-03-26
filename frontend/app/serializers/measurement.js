@@ -29,9 +29,13 @@ export default DS.JSONSerializer.extend({
   },
   extractAttributes(modelClass, resourceHash) {
     let t = resourceHash['content']['$t'];
-    let attributes = {};
+    let re = /username:\s*(.*),\s*happiness:\s*(\d)/;
+    let found = t.match(re);
 
-    attributes.username = t;
+    let attributes = {
+      username: found[1],
+      happiness: found[2]
+    };
 
     return attributes;
   }
