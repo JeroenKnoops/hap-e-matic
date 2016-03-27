@@ -16,5 +16,8 @@ export default DS.Model.extend({
     let d = new Date(this.get('createdAt'));
     d.setDate(d.getDate() + 1 - (d.getDay()||7)); // + 1 to adjust entries that arrived too late.
     return Math.ceil((((d - new Date(d.getFullYear(),0,1))/8.64e7) + 1)/7);
+  }),
+  weekYear: computed(function() {
+    return `${this.get('weekNo')}${this.get('year')}`;
   })
 });
