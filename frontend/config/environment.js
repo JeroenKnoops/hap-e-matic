@@ -1,9 +1,6 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-  const sheetId = process.env.GOOGLE_SPREADSHEET_ID;
-  const url = `https://spreadsheets.google.com/feeds/list/${sheetId}/od6/public/basic?alt=json`;
-
   var ENV = {
     modulePrefix: 'hap-e-matic',
     environment: environment,
@@ -22,7 +19,7 @@ module.exports = function(environment) {
     },
 
     // dotenv:
-    GoogleSpreadsheetUrl: url
+    GoogleSpreadsheetId: process.env.GOOGLE_SPREADSHEET_ID
   };
 
   if (environment === 'development') {
@@ -31,6 +28,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    //ENV['ember-cli-mirage'] = {
+      //enabled: false
+    //}
   }
 
   if (environment === 'test') {
