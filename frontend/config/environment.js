@@ -1,6 +1,9 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+  const sheetId = process.env.GOOGLE_SPREADSHEET_ID;
+  const url = `https://spreadsheets.google.com/feeds/list/${sheetId}/od6/public/basic?alt=json`;
+
   var ENV = {
     modulePrefix: 'hap-e-matic',
     environment: environment,
@@ -19,7 +22,7 @@ module.exports = function(environment) {
     },
 
     // dotenv:
-    SHEET: process.env.SHEET
+    GoogleSpreadsheetUrl: url
   };
 
   if (environment === 'development') {
