@@ -34,7 +34,8 @@ export default DS.JSONSerializer.extend({
 
     let attributes = {
       username: found[1],
-      happiness: found[2]
+      happiness: found[2],
+      createdAt: resourceHash['title']['$t']
     };
 
     return attributes;

@@ -1,5 +1,5 @@
 <ul>
   {{#each model as |measurement|}}
-  <li>{{ measurement.username }} - {{ measurement.happiness }}</li>
+  <li>{{ measurement.username }} - {{ measurement.happiness }} ({{ measurement.createdAt}})</li>
   {{/each}}
 </ul>

@@ -2,5 +2,6 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   username: DS.attr('string'),
-  happiness: DS.attr('number')
+  happiness: DS.attr('number'),
+  createdAt: DS.attr('date')
 });
