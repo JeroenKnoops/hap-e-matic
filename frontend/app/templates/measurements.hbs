@@ -1,5 +1,18 @@
-<ul>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>User</th>
+    <th>Happiness</th>
+    <th>Week</th>
+    <th>Year</th>
+  </tr>
   {{#each model as |measurement|}}
-  <li>{{ measurement.username }} - {{ measurement.happiness }} ({{ measurement.createdAt}})</li>
+    <tr>
+      <td>{{ measurement.createdAt }}</td>
+      <td>{{ measurement.username }}</td>
+      <td>{{ measurement.happiness }}</td>
+      <td>{{ measurement.weekNo }}</td>
+      <td>{{ measurement.year }}</td>
+    </tr>
   {{/each}}
-</ul>
+</table>
