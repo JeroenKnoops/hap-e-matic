@@ -6,7 +6,7 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
     dotEnv: {
-      clientAllowedKeys: ['SHEET']
+      clientAllowedKeys: ['GOOGLE_SPREADSHEET_ID']
     }
   });
 
