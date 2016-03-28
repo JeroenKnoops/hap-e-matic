@@ -5,25 +5,11 @@ const { computed } = Ember;
 export default Ember.Component.extend({
   tagName: 'li',
   classNames: ['happiness-summary'],
-  attributeBindings: ['style'],
-  style: Ember.computed(function() {
-    return [this.get('backgroundColor'),
-            this.get('fontSize'),
-            this.get('dimensions')].join(';');
-  }),
+  classNameBindings: ['backgroundColor', 'dimensions'],
   backgroundColor: computed(function() {
-    let h = 30 * (this.get('summary.happiness')-1),
-        s = 50,
-        l = 53;
-    return `background-color: hsl(${h}, ${s}%, ${l}%)`;
-  }),
-  fontSize: computed(function() {
-    let length = Math.pow(this.get('summary.count'), 1.5) + 10;
-    return `font-size: ${length}px`;
+    return `happiness-${Math.round(this.get('summary.happiness'))}`;
   }),
   dimensions: computed(function() {
-    let length = Math.pow(this.get('summary.count'), 2) + 30;
-
-    return `width: ${length}px; height: ${length}px`;
+    return `dimensions-${Math.round(this.get('summary.count')/4)+1}`;
   })
 });

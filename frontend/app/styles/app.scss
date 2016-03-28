@@ -1,2 +1,11 @@
-@import 'modules/loading';
-@import 'modules/happiness-summary';
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower|Poiret+One);
+@import 'mixins';
+@import 'modules';
+
+body {
+  margin: 8em 0;
+  background: hsl(199, 26%, 53%);
+  color: white;
+  font-family: 'Poiret One', cursive;
+  font-weight: 300;
+}

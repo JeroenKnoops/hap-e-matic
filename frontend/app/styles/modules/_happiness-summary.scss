@@ -1,5 +1,4 @@
 .happiness-items {
-  width: 70%;
   margin: 0 auto;
   list-style-type: none;
   display: flex;
@@ -9,8 +8,12 @@
   align-items: center;
   text-align: center;
   color: white;
-  font-family: fantasy;
+  /*font-family: fantasy;*/
   text-shadow: hsla(0, 0%, 0%, 0.4) 0px 1px 3px;
+  font-family: 'Indie Flower', cursive;
+  @media screen and (min-width: 1024px) {
+    width: 70%;
+  }
 }
 
 .happiness-summary {
@@ -20,7 +23,6 @@
   align-items: center;
   margin: 12px;
   border-radius: 50%;
-  box-shadow: 0 2px 2px 0 hsla(0, 0%, 0%, 0.14),0 3px 1px -2px hsla(0, 0%, 0%, 0.2),0 1px 5px 0 hsla(0, 0%, 0%, 0.12);
 }
 
 .happiness-weekyear {
@@ -29,18 +31,40 @@
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.3em;
+  font-size: 0.25em;
   text-shadow: none;
   color: hsl(0, 0%, 98%);
+  font-family: 'Poiret One', cursive;
 }
 
 .happiness-count {
   position: absolute;
-  bottom: 0;
+  bottom: 0.5em;
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.5em;
+  font-size: 0.25em;
   text-shadow: none;
   color: hsl(0, 0%, 98%);
+  font-family: 'Poiret One', cursive;
 }
+
+@for $i from 1 through 5 {
+  $h: 30 * ($i - 1);
+  $s: 26%;
+  $l: 53%;
+  .happiness-#{$i} {
+    background-color: hsl($h, $s, $l);
+  }
+}
+
+@for $i from 1 through 6 {
+  $base: 1em;
+  .dimensions-#{$i} {
+    font-size: $i*$base;
+    width: $i*$base;
+    height: $i*$base;
+    box-shadow: bottom-shadow($i), top-shadow($i);
+  }
+}
+
