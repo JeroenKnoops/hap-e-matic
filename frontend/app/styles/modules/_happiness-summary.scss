@@ -14,10 +14,33 @@
 }
 
 .happiness-summary {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 12px;
   border-radius: 50%;
   box-shadow: 0 2px 2px 0 hsla(0, 0%, 0%, 0.14),0 3px 1px -2px hsla(0, 0%, 0%, 0.2),0 1px 5px 0 hsla(0, 0%, 0%, 0.12);
+}
+
+.happiness-weekyear {
+  position: absolute;
+  top: 1em;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.3em;
+  text-shadow: none;
+  color: hsl(0, 0%, 98%);
+}
+
+.happiness-count {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.5em;
+  text-shadow: none;
+  color: hsl(0, 0%, 98%);
 }

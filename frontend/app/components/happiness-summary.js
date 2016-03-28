@@ -19,7 +19,6 @@ export default Ember.Component.extend({
   }),
   fontSize: computed(function() {
     let length = Math.pow(this.get('summary.count'), 1.5) + 10;
-    //let length = 20;
     return `font-size: ${length}px`;
   }),
   dimensions: computed(function() {
