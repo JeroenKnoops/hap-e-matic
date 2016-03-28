@@ -1,6 +1,6 @@
 <h2>Happiness</h2>
 <ul>
   {{#each model as |summary|}}
-  <li>{{ summary.group }} - {{ summary.happiness }} ({{ summary.count }})</li>
+  {{happiness-summary summary=summary}}
   {{/each}}
 </ul>
