@@ -9,7 +9,6 @@
   align-items: center;
   text-align: center;
   color: white;
-  /*font-family: fantasy;*/
   text-shadow: hsla(0, 0%, 0%, 0.4) 0px 1px 3px;
   font-family: 'Indie Flower', cursive;
   @media screen and (min-width: 1024px) {
@@ -24,6 +23,8 @@
   align-items: center;
   margin: 12px;
   border-radius: 50%;
+  @extend .animated;
+  @extend .bounce;
 }
 
 .happiness-weekyear {
@@ -68,4 +69,3 @@
     box-shadow: bottom-shadow($i), top-shadow($i);
   }
 }
-
