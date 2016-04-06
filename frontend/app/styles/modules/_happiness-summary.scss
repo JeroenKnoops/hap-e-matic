@@ -25,6 +25,7 @@
   border-radius: 50%;
   @extend .animated;
   @extend .zoomIn; // See: https://github.com/daneden/animate.css
+  animation-duration: .5s;
 }
 
 .happiness-weekyear {
