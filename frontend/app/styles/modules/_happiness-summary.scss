@@ -67,6 +67,6 @@
     width: $i*$base;
     height: $i*$base;
     box-shadow: bottom-shadow($i), top-shadow($i);
-    animation-delay: #{($i - 1)*0.2}s;
+    animation-delay: #{(6 - $i)*0.2}s;
   }
 }
