@@ -24,7 +24,7 @@
   margin: 12px;
   border-radius: 50%;
   @extend .animated;
-  @extend .bounce;
+  @extend .zoomIn; // See: https://github.com/daneden/animate.css
 }
 
 .happiness-weekyear {
@@ -67,5 +67,6 @@
     width: $i*$base;
     height: $i*$base;
     box-shadow: bottom-shadow($i), top-shadow($i);
+    animation-delay: #{($i - 1)*0.2}s;
   }
 }

@@ -4,7 +4,7 @@ const { computed } = Ember;
 
 export default Ember.Component.extend({
   tagName: 'li',
-  classNames: ['happiness-summary animated rubberBand'],
+  classNames: ['happiness-summary'],
   classNameBindings: ['backgroundColor', 'dimensions'],
   backgroundColor: computed(function() {
     return `happiness-${Math.round(this.get('summary.happiness'))}`;
