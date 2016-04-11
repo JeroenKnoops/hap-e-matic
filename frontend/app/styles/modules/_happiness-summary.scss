@@ -7,25 +7,33 @@
   flex-wrap: wrap-reverse;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white;
-  text-shadow: hsla(0, 0%, 0%, 0.4) 0px 1px 3px;
-  font-family: 'Indie Flower', cursive;
   @media screen and (min-width: 1024px) {
     width: 70%;
+  }
+  .happiness-summary {
+    @extend .animated;
+    @extend .zoomIn; // See: https://github.com/daneden/animate.css
+    animation-duration: .5s;
+  }
+
+  @for $i from 1 through 6 {
+  .dimensions-#{$i} {
+      animation-delay: #{(6 - $i)*0.2}s;
+    }
   }
 }
 
 .happiness-summary {
+  text-align: center;
+  color: white;
+  text-shadow: hsla(0, 0%, 0%, 0.4) 0px 1px 3px;
+  font-family: 'Indie Flower', cursive;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 12px;
   border-radius: 50%;
-  @extend .animated;
-  @extend .zoomIn; // See: https://github.com/daneden/animate.css
-  animation-duration: .5s;
 }
 
 .happiness-weekyear {
@@ -68,6 +76,5 @@
     width: $i*$base;
     height: $i*$base;
     box-shadow: bottom-shadow($i), top-shadow($i);
-    animation-delay: #{(6 - $i)*0.2}s;
   }
 }

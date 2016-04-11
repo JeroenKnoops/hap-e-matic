@@ -7,7 +7,8 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('measurements');
-  this.route('happiness');
+  this.route('overview', { path: '/happiness' });
+  this.route('happiness', { path: '/happiness/:weekYear'});
 });
 
 export default Router;

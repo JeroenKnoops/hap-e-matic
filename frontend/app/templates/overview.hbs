@@ -1,0 +1,5 @@
+<ul class="happiness-items">
+  {{#each model as |summary|}}
+  {{#link-to "happiness" summary.group}}{{happiness-summary summary=summary}}{{/link-to}}
+  {{/each}}
+</ul>

@@ -1,5 +1,2 @@
-<ul class="happiness-items">
-  {{#each model as |summary|}}
-  {{happiness-summary summary=summary}}
-  {{/each}}
-</ul>
+{{#link-to "overview"}}Back{{/link-to}}
+{{happiness-summary summary=model}}
