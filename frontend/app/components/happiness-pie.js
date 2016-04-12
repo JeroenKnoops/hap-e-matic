@@ -41,6 +41,7 @@ export default Component.extend({
     return Math.round(this.get('total')/this.get('count') * 10)/10;
   }),
   chartOptions: {
-    segmentShowStroke: false
+    segmentShowStroke: false,
+    animationEasing: 'easeOutSine'
   }
 });
