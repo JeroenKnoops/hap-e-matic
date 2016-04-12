@@ -1,1 +1,5 @@
-{{ember-chart type='Pie' data=chartData options=chartOptions width=200 height=200}}
+<div>
+  <h2>Happiness for week {{weekNo}} ({{year}})</h2>
+  <p><strong>{{count}}</strong> Kabisians have an average happiness of <strong>{{happiness}}</strong>.</p>
+  {{ember-chart type='Pie' data=chartData options=chartOptions width=256 height=256 legend=true}}
+</div>

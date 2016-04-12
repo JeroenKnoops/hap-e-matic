@@ -8,4 +8,8 @@
   background: black;
   z-index: 9999;
   box-shadow: hsla(198, 25%, 10%, 0.25) 0 0 10px 3px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
